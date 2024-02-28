@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+                
+        body{
+            font-size: 16px;
+            font-family: 'Poppins';
+        }
+        nav{
+            width: 10rem ;
+        }
+
+        nav ul{
+            list-style: none;
+            padding: 5px;
+            background-color: #252525;
+            color: #fff;
+            border-radius: 5px;
+
+        }
+        nav ul li{
+            display: block;
+            position: relative;
+
+        }
+        nav ul li a{
+            display:block;
+            color: white;
+            background-color: #252525;
+            padding: 0.5em 0.5em;
+            text-decoration: none;
+            
+        }
+
+        nav ul li a:hover, nav ul li a:focus-within{
+            background-color: rgb(127, 221, 255);
+        }
+
+        nav ul li ul, .dropdown-content1{
+            display: none;
+            width: 10rem;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #252525;
+        }
+
+        .products-link:hover .dropdown-content, nav ul li a:focus-within{
+            display:block;
+        }
+
+        .product1-link:hover .dropdown-content1, nav ul li a:focus-within{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your content goes here -->
+
+        <nav>
+            <ul>
+                <li tabindex="0"><a href="#">Home</a></li>
+                <li tabindex="0" class="products-link"><a href="#">Products</a>
+                        <ul class="dropdown-content">
+                            <li class="product1-link"><a href="#">Product 1</a>
+                                    <ul class="dropdown-content1">
+                                        <li><a href="#">Sub Product</a></li>
+                                        <li><a href="#">Sub Product</a></li>
+                                    </ul>
+                            </li>
+                            <li class="product1-link"><a href="#">Product 2</a>
+                                    <ul class="dropdown-content1">
+                                        <li><a href="#">Sub Product</a></li>
+                                        <li><a href="#">Sub Product</a></li>
+                                    </ul>
+                            </li>
+                        </ul>   
+                </li>
+                <li tabindex="0"><a href="#about">About</a></li>
+                <li tabindex="0"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+</body>
+</html>
